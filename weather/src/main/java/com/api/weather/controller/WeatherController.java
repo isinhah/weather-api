@@ -18,7 +18,7 @@ public class WeatherController {
     private final WeatherService weatherService;
 
     @GetMapping("/{city}")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(value = HttpStatus.OK)
     public WeatherDto getWeather(@PathVariable String city) {
         return weatherService.getWeather(city);
     }
